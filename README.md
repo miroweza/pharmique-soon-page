@@ -1,64 +1,87 @@
-# Astro Starter Kit: Blog
+# Pharmique Coming Soon Page
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+A simple coming soon page for Pharmique, built with Astro and deployed on Cloudflare Workers.
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## What This Is
 
-<!-- dash-content-start -->
+This is a minimal coming soon page that displays a single image (`ComingSoon1.jfif`) centered on the page with a dark background.
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Features
 
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
-
-<!-- dash-content-end -->
+- ✅ Simple, clean design
+- ✅ Responsive image display
+- ✅ Dark theme
+- ✅ Deployed on Cloudflare Workers
+- ✅ Fast loading and performance
 
 ## Getting Started
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+### Prerequisites
 
+- Node.js (version 16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+To start the development server:
 ```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
+npm run dev
 ```
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+The site will be available at `http://localhost:4321`
 
-## 🚀 Project Structure
+### Building
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To build for production:
+```bash
+npm run build
+```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Deployment
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+To deploy to Cloudflare Workers:
+```bash
+npm run deploy
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Project Structure
 
-## 🧞 Commands
+```
+pharmique-soon-page/
+├── src/
+│   ├── components/
+│   │   └── BaseHead.astro
+│   ├── pages/
+│   │   └── index.astro
+│   ├── styles/
+│   │   └── global.css
+│   └── consts.ts
+├── public/
+│   └── images/
+│       └── ComingSoon1.jfif
+└── astro.config.mjs
+```
 
-All commands are run from the root of the project, from a terminal:
+## Customization
 
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
+To change the coming soon image:
+1. Replace `public/images/ComingSoon1.jfif` with your new image
+2. Update the image path in `src/pages/index.astro` if needed
 
-## 👀 Want to learn more?
+## Technologies Used
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Astro](https://astro.build/) - Static site generator
+- [Cloudflare Workers](https://workers.cloudflare.com/) - Deployment platform
+- TypeScript - Type safety
 
-## Credit
+## License
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This project is private and proprietary to Pharmique.
